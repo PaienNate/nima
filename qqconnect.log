@@ -1,0 +1,856 @@
+0    INFO  [2023-02-20 08:57:38]  {dataSource-1} inited
+229  DEBUG [2023-02-20 08:57:38]  Using Log4J as the default logging framework
+231  DEBUG [2023-02-20 08:57:38]  -Dio.netty.eventLoopThreads: 12
+236  DEBUG [2023-02-20 08:57:38]  Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+246  DEBUG [2023-02-20 08:57:38]  -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+247  DEBUG [2023-02-20 08:57:38]  -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+249  DEBUG [2023-02-20 08:57:38]  -Dio.netty.leakDetection.level: simple
+249  DEBUG [2023-02-20 08:57:38]  -Dio.netty.leakDetection.targetRecords: 4
+250  DEBUG [2023-02-20 08:57:38]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@267ff4df
+252  DEBUG [2023-02-20 08:57:38]  Platform: Windows
+253  DEBUG [2023-02-20 08:57:38]  -Dio.netty.noUnsafe: false
+253  DEBUG [2023-02-20 08:57:38]  Java version: 11
+253  DEBUG [2023-02-20 08:57:38]  sun.misc.Unsafe.theUnsafe: available
+254  DEBUG [2023-02-20 08:57:38]  sun.misc.Unsafe.copyMemory: available
+254  DEBUG [2023-02-20 08:57:38]  java.nio.Buffer.address: available
+255  DEBUG [2023-02-20 08:57:38]  direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:238)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:232)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:109)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:218)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:197)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:179)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:163)
+	at io.lettuce.core.resource.DefaultClientResources.<init>(DefaultClientResources.java:178)
+	at io.lettuce.core.resource.DefaultClientResources$Builder.build(DefaultClientResources.java:563)
+	at io.lettuce.core.resource.DefaultClientResources.create(DefaultClientResources.java:243)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.lettuceClientResources(LettuceConnectionConfiguration.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:229)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:229)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:229)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:229)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at cn.zf233.xcloud.XcloudApplication.main(XcloudApplication.java:16)
+259  DEBUG [2023-02-20 08:57:38]  java.nio.Bits.unaligned: available, true
+260  DEBUG [2023-02-20 08:57:38]  jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @7899de11
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:352)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:343)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:293)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:92)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:109)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:218)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:197)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:179)
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:163)
+	at io.lettuce.core.resource.DefaultClientResources.<init>(DefaultClientResources.java:178)
+	at io.lettuce.core.resource.DefaultClientResources$Builder.build(DefaultClientResources.java:563)
+	at io.lettuce.core.resource.DefaultClientResources.create(DefaultClientResources.java:243)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.lettuceClientResources(LettuceConnectionConfiguration.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:229)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:229)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:229)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:229)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at cn.zf233.xcloud.XcloudApplication.main(XcloudApplication.java:16)
+261  DEBUG [2023-02-20 08:57:38]  java.nio.DirectByteBuffer.<init>(long, int): unavailable
+261  DEBUG [2023-02-20 08:57:38]  sun.misc.Unsafe: available
+261  DEBUG [2023-02-20 08:57:38]  maxDirectMemory: 8547991552 bytes (maybe)
+262  DEBUG [2023-02-20 08:57:38]  -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+262  DEBUG [2023-02-20 08:57:38]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+262  DEBUG [2023-02-20 08:57:38]  -Dio.netty.maxDirectMemory: -1 bytes
+263  DEBUG [2023-02-20 08:57:38]  -Dio.netty.uninitializedArrayAllocationThreshold: -1
+263  DEBUG [2023-02-20 08:57:38]  java.nio.ByteBuffer.cleaner(): available
+263  DEBUG [2023-02-20 08:57:38]  -Dio.netty.noPreferDirect: false
+264  DEBUG [2023-02-20 08:57:38]  org.jctools-core.MpscChunkedArrayQueue: available
+282  DEBUG [2023-02-20 08:57:38]  LatencyUtils/HdrUtils are not available, metrics are disabled
+36064 DEBUG [2023-02-20 08:58:14]  Trying to get a Redis connection for: redis://127.0.0.1?timeout=5s
+36150 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.numHeapArenas: 24
+36150 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.numDirectArenas: 24
+36150 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.pageSize: 8192
+36151 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.maxOrder: 11
+36151 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.chunkSize: 16777216
+36151 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.smallCacheSize: 256
+36151 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.normalCacheSize: 64
+36151 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+36151 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.cacheTrimInterval: 8192
+36151 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+36151 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.useCacheForAllThreads: true
+36151 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+36157 DEBUG [2023-02-20 08:58:14]  -Dio.netty.allocator.type: pooled
+36157 DEBUG [2023-02-20 08:58:14]  -Dio.netty.threadLocalDirectBufferSize: 0
+36157 DEBUG [2023-02-20 08:58:14]  -Dio.netty.maxThreadLocalCharBufferSize: 16384
+36159 DEBUG [2023-02-20 08:58:14]  Starting without optional kqueue library
+36160 DEBUG [2023-02-20 08:58:14]  Starting without optional epoll library
+36161 DEBUG [2023-02-20 08:58:14]  Allocating executor io.netty.channel.nio.NioEventLoopGroup
+36161 DEBUG [2023-02-20 08:58:14]  Creating executor io.netty.channel.nio.NioEventLoopGroup
+36161 DEBUG [2023-02-20 08:58:14]  -Dio.netty.eventLoopThreads: 24
+36163 DEBUG [2023-02-20 08:58:14]  -Dio.netty.noKeySetOptimization: false
+36163 DEBUG [2023-02-20 08:58:14]  -Dio.netty.selectorAutoRebuildThreshold: 512
+36168 DEBUG [2023-02-20 08:58:14]  Adding reference to io.netty.channel.nio.NioEventLoopGroup@20c59ef3, existing ref count 0
+36175 DEBUG [2023-02-20 08:58:14]  Resolved SocketAddress 127.0.0.1:6379 using redis://127.0.0.1?timeout=5s
+36175 DEBUG [2023-02-20 08:58:14]  Connecting to Redis at 127.0.0.1:6379
+36179 DEBUG [2023-02-20 08:58:14]  -Dio.netty.processId: 4396 (auto-detected)
+36180 DEBUG [2023-02-20 08:58:14]  -Djava.net.preferIPv4Stack: false
+36180 DEBUG [2023-02-20 08:58:14]  -Djava.net.preferIPv6Addresses: false
+36633 DEBUG [2023-02-20 08:58:14]  Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+36634 DEBUG [2023-02-20 08:58:14]  Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+37107 DEBUG [2023-02-20 08:58:15]  -Dio.netty.machineId: 44:af:28:ff:fe:31:a5:6f (auto-detected)
+37136 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, [id: 0x96be9843] (inactive), chid=0x1] channelRegistered()
+37139 DEBUG [2023-02-20 08:58:15]  -Dio.netty.recycler.maxCapacityPerThread: 4096
+37139 DEBUG [2023-02-20 08:58:15]  -Dio.netty.recycler.maxSharedCapacityFactor: 2
+37139 DEBUG [2023-02-20 08:58:15]  -Dio.netty.recycler.linkCapacity: 16
+37139 DEBUG [2023-02-20 08:58:15]  -Dio.netty.recycler.ratio: 8
+37139 DEBUG [2023-02-20 08:58:15]  -Dio.netty.recycler.delayedQueue.ratio: 8
+37144 DEBUG [2023-02-20 08:58:15]  -Dio.netty.buffer.checkAccessible: true
+37145 DEBUG [2023-02-20 08:58:15]  -Dio.netty.buffer.checkBounds: true
+37145 DEBUG [2023-02-20 08:58:15]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@9cec68e
+37160 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+37162 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379] writing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+37165 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] Received: 30 bytes, 1 commands in the stack
+37165 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+37166 DEBUG [2023-02-20 08:58:15]  Decode done, empty stack: true
+37166 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='ERR unknown command 'HELLO''], commandType=io.lettuce.core.protocol.Command]
+37167 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+37167 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379] writing command AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+37168 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] Received: 7 bytes, 1 commands in the stack
+37168 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+37168 DEBUG [2023-02-20 08:58:15]  Decode done, empty stack: true
+37168 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=PING, output=StatusOutput [output=PONG, error='null'], commandType=io.lettuce.core.protocol.Command]
+37168 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] channelActive()
+37169 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, epid=0x1] activateEndpointAndExecuteBufferedCommands 0 command(s) buffered
+37169 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, epid=0x1] activating endpoint
+37169 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, epid=0x1] flushCommands()
+37169 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, epid=0x1] flushCommands() Flushing 0 commands
+37169 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelActive()
+37170 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] channelActive() done
+37170 DEBUG [2023-02-20 08:58:15]  Connecting to Redis at 127.0.0.1:6379: Success
+37177 DEBUG [2023-02-20 08:58:15]  dispatching command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+37178 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, epid=0x1] write() writeAndFlush command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+37180 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+37181 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379] writing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+37182 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, epid=0x1] write() done
+37183 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] Received: 4 bytes, 1 commands in the stack
+37183 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+37183 DEBUG [2023-02-20 08:58:15]  Decode done, empty stack: true
+37184 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+37185 DEBUG [2023-02-20 08:58:15]  closeAsync()
+37185 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, epid=0x1] closeAsync()
+37186 DEBUG [2023-02-20 08:58:15]  Initiate shutdown (100, 100, MILLISECONDS)
+37187 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] channelInactive()
+37187 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, epid=0x1] deactivating endpoint handler
+37187 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] channelInactive() done
+37187 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelInactive()
+37187 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] Reconnect scheduling disabled
+37187 DEBUG [2023-02-20 08:58:15]  [channel=0x1da2580e, /127.0.0.1:50705 -> /127.0.0.1:6379, chid=0x1] channelUnregistered()
+37188 DEBUG [2023-02-20 08:58:15]  Release executor io.netty.channel.nio.NioEventLoopGroup@20c59ef3
+37293 DEBUG [2023-02-20 08:58:15]  Freed 5 thread-local buffer(s) from thread: lettuce-nioEventLoop-4-1
+37294 DEBUG [2023-02-20 08:58:15]  Initiate shutdown (0, 2, SECONDS)
+37296 DEBUG [2023-02-20 08:58:15]  Initiate shutdown (0, 2, SECONDS)
+37298 INFO  [2023-02-20 08:58:15]  {dataSource-1} closing ...
+37302 INFO  [2023-02-20 08:58:15]  {dataSource-1} closed
+0    INFO  [2023-02-20 08:58:31]  {dataSource-1} inited
+265  DEBUG [2023-02-20 08:58:31]  Using Log4J as the default logging framework
+267  DEBUG [2023-02-20 08:58:31]  -Dio.netty.eventLoopThreads: 12
+273  DEBUG [2023-02-20 08:58:31]  Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+283  DEBUG [2023-02-20 08:58:31]  -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+283  DEBUG [2023-02-20 08:58:31]  -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+285  DEBUG [2023-02-20 08:58:31]  -Dio.netty.leakDetection.level: simple
+285  DEBUG [2023-02-20 08:58:31]  -Dio.netty.leakDetection.targetRecords: 4
+286  DEBUG [2023-02-20 08:58:31]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5a8ab2
+288  DEBUG [2023-02-20 08:58:31]  Platform: Windows
+289  DEBUG [2023-02-20 08:58:31]  -Dio.netty.noUnsafe: false
+289  DEBUG [2023-02-20 08:58:31]  Java version: 8
+290  DEBUG [2023-02-20 08:58:31]  sun.misc.Unsafe.theUnsafe: available
+290  DEBUG [2023-02-20 08:58:31]  sun.misc.Unsafe.copyMemory: available
+290  DEBUG [2023-02-20 08:58:31]  java.nio.Buffer.address: available
+291  DEBUG [2023-02-20 08:58:31]  direct buffer constructor: available
+291  DEBUG [2023-02-20 08:58:31]  java.nio.Bits.unaligned: available, true
+291  DEBUG [2023-02-20 08:58:31]  jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+291  DEBUG [2023-02-20 08:58:31]  java.nio.DirectByteBuffer.<init>(long, int): available
+292  DEBUG [2023-02-20 08:58:31]  sun.misc.Unsafe: available
+292  DEBUG [2023-02-20 08:58:31]  -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+292  DEBUG [2023-02-20 08:58:31]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+293  DEBUG [2023-02-20 08:58:31]  -Dio.netty.maxDirectMemory: 8460763136 bytes
+293  DEBUG [2023-02-20 08:58:31]  -Dio.netty.uninitializedArrayAllocationThreshold: -1
+293  DEBUG [2023-02-20 08:58:31]  java.nio.ByteBuffer.cleaner(): available
+293  DEBUG [2023-02-20 08:58:31]  -Dio.netty.noPreferDirect: false
+295  DEBUG [2023-02-20 08:58:31]  org.jctools-core.MpscChunkedArrayQueue: available
+316  DEBUG [2023-02-20 08:58:31]  LatencyUtils/HdrUtils are not available, metrics are disabled
+1144202 DEBUG [2023-02-20 09:17:35]  Trying to get a Redis connection for: redis://127.0.0.1?timeout=5s
+1144272 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.numHeapArenas: 24
+1144272 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.numDirectArenas: 24
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.pageSize: 8192
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.maxOrder: 11
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.chunkSize: 16777216
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.smallCacheSize: 256
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.normalCacheSize: 64
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.cacheTrimInterval: 8192
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.useCacheForAllThreads: true
+1144273 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+1144280 DEBUG [2023-02-20 09:17:35]  -Dio.netty.allocator.type: pooled
+1144280 DEBUG [2023-02-20 09:17:35]  -Dio.netty.threadLocalDirectBufferSize: 0
+1144280 DEBUG [2023-02-20 09:17:35]  -Dio.netty.maxThreadLocalCharBufferSize: 16384
+1144283 DEBUG [2023-02-20 09:17:35]  Starting without optional kqueue library
+1144283 DEBUG [2023-02-20 09:17:35]  Starting without optional epoll library
+1144285 DEBUG [2023-02-20 09:17:35]  Allocating executor io.netty.channel.nio.NioEventLoopGroup
+1144285 DEBUG [2023-02-20 09:17:35]  Creating executor io.netty.channel.nio.NioEventLoopGroup
+1144285 DEBUG [2023-02-20 09:17:35]  -Dio.netty.eventLoopThreads: 24
+1144287 DEBUG [2023-02-20 09:17:35]  -Dio.netty.noKeySetOptimization: false
+1144287 DEBUG [2023-02-20 09:17:35]  -Dio.netty.selectorAutoRebuildThreshold: 512
+1144293 DEBUG [2023-02-20 09:17:35]  Adding reference to io.netty.channel.nio.NioEventLoopGroup@bd9a106, existing ref count 0
+1144300 DEBUG [2023-02-20 09:17:35]  Resolved SocketAddress 127.0.0.1:6379 using redis://127.0.0.1?timeout=5s
+1144301 DEBUG [2023-02-20 09:17:35]  Connecting to Redis at 127.0.0.1:6379
+1144305 DEBUG [2023-02-20 09:17:35]  -Dio.netty.processId: 15680 (auto-detected)
+1144306 DEBUG [2023-02-20 09:17:35]  -Djava.net.preferIPv4Stack: false
+1144306 DEBUG [2023-02-20 09:17:35]  -Djava.net.preferIPv6Addresses: false
+1144730 DEBUG [2023-02-20 09:17:35]  Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+1144731 DEBUG [2023-02-20 09:17:35]  Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+1145200 DEBUG [2023-02-20 09:17:36]  -Dio.netty.machineId: 44:af:28:ff:fe:31:a5:6f (auto-detected)
+1145233 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, [id: 0x38f2c7e4] (inactive), chid=0x1] channelRegistered()
+1145236 DEBUG [2023-02-20 09:17:36]  -Dio.netty.recycler.maxCapacityPerThread: 4096
+1145236 DEBUG [2023-02-20 09:17:36]  -Dio.netty.recycler.maxSharedCapacityFactor: 2
+1145236 DEBUG [2023-02-20 09:17:36]  -Dio.netty.recycler.linkCapacity: 16
+1145236 DEBUG [2023-02-20 09:17:36]  -Dio.netty.recycler.ratio: 8
+1145236 DEBUG [2023-02-20 09:17:36]  -Dio.netty.recycler.delayedQueue.ratio: 8
+1145242 DEBUG [2023-02-20 09:17:36]  -Dio.netty.buffer.checkAccessible: true
+1145242 DEBUG [2023-02-20 09:17:36]  -Dio.netty.buffer.checkBounds: true
+1145242 DEBUG [2023-02-20 09:17:36]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@68139fcb
+1145256 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+1145257 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379] writing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+1145261 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] Received: 30 bytes, 1 commands in the stack
+1145261 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+1145263 DEBUG [2023-02-20 09:17:36]  Decode done, empty stack: true
+1145263 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='ERR unknown command 'HELLO''], commandType=io.lettuce.core.protocol.Command]
+1145264 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+1145264 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379] writing command AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+1145266 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] Received: 7 bytes, 1 commands in the stack
+1145266 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+1145266 DEBUG [2023-02-20 09:17:36]  Decode done, empty stack: true
+1145266 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=PING, output=StatusOutput [output=PONG, error='null'], commandType=io.lettuce.core.protocol.Command]
+1145266 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] channelActive()
+1145267 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, epid=0x1] activateEndpointAndExecuteBufferedCommands 0 command(s) buffered
+1145267 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, epid=0x1] activating endpoint
+1145267 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, epid=0x1] flushCommands()
+1145267 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, epid=0x1] flushCommands() Flushing 0 commands
+1145267 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelActive()
+1145267 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] channelActive() done
+1145267 DEBUG [2023-02-20 09:17:36]  Connecting to Redis at 127.0.0.1:6379: Success
+1145275 DEBUG [2023-02-20 09:17:36]  dispatching command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+1145276 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, epid=0x1] write() writeAndFlush command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+1145278 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+1145278 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379] writing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+1145279 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, epid=0x1] write() done
+1145280 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] Received: 4 bytes, 1 commands in the stack
+1145280 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+1145280 DEBUG [2023-02-20 09:17:36]  Decode done, empty stack: true
+1145280 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+1145282 DEBUG [2023-02-20 09:17:36]  closeAsync()
+1145282 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, epid=0x1] closeAsync()
+1145284 DEBUG [2023-02-20 09:17:36]  Initiate shutdown (100, 100, MILLISECONDS)
+1145285 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] channelInactive()
+1145285 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, epid=0x1] deactivating endpoint handler
+1145285 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] channelInactive() done
+1145286 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelInactive()
+1145286 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] Reconnect scheduling disabled
+1145286 DEBUG [2023-02-20 09:17:36]  [channel=0x7f4a89c9, /127.0.0.1:62105 -> /127.0.0.1:6379, chid=0x1] channelUnregistered()
+1145288 DEBUG [2023-02-20 09:17:36]  Release executor io.netty.channel.nio.NioEventLoopGroup@bd9a106
+1145392 DEBUG [2023-02-20 09:17:36]  Freed 5 thread-local buffer(s) from thread: lettuce-nioEventLoop-4-1
+1145394 DEBUG [2023-02-20 09:17:36]  Initiate shutdown (0, 2, SECONDS)
+1145396 DEBUG [2023-02-20 09:17:36]  Initiate shutdown (0, 2, SECONDS)
+1145396 INFO  [2023-02-20 09:17:36]  {dataSource-1} closing ...
+1145399 INFO  [2023-02-20 09:17:36]  {dataSource-1} closed
+0    INFO  [2023-02-20 09:17:40]  {dataSource-1} inited
+211  DEBUG [2023-02-20 09:17:40]  Using Log4J as the default logging framework
+213  DEBUG [2023-02-20 09:17:40]  -Dio.netty.eventLoopThreads: 12
+219  DEBUG [2023-02-20 09:17:40]  Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+230  DEBUG [2023-02-20 09:17:40]  -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+230  DEBUG [2023-02-20 09:17:40]  -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+233  DEBUG [2023-02-20 09:17:40]  -Dio.netty.leakDetection.level: simple
+233  DEBUG [2023-02-20 09:17:40]  -Dio.netty.leakDetection.targetRecords: 4
+235  DEBUG [2023-02-20 09:17:40]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@54db056b
+236  DEBUG [2023-02-20 09:17:40]  Platform: Windows
+237  DEBUG [2023-02-20 09:17:40]  -Dio.netty.noUnsafe: false
+237  DEBUG [2023-02-20 09:17:40]  Java version: 8
+238  DEBUG [2023-02-20 09:17:40]  sun.misc.Unsafe.theUnsafe: available
+238  DEBUG [2023-02-20 09:17:40]  sun.misc.Unsafe.copyMemory: available
+239  DEBUG [2023-02-20 09:17:40]  java.nio.Buffer.address: available
+239  DEBUG [2023-02-20 09:17:40]  direct buffer constructor: available
+240  DEBUG [2023-02-20 09:17:40]  java.nio.Bits.unaligned: available, true
+240  DEBUG [2023-02-20 09:17:40]  jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+240  DEBUG [2023-02-20 09:17:40]  java.nio.DirectByteBuffer.<init>(long, int): available
+240  DEBUG [2023-02-20 09:17:40]  sun.misc.Unsafe: available
+240  DEBUG [2023-02-20 09:17:40]  -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+240  DEBUG [2023-02-20 09:17:40]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+241  DEBUG [2023-02-20 09:17:40]  -Dio.netty.maxDirectMemory: 8460763136 bytes
+241  DEBUG [2023-02-20 09:17:40]  -Dio.netty.uninitializedArrayAllocationThreshold: -1
+242  DEBUG [2023-02-20 09:17:40]  java.nio.ByteBuffer.cleaner(): available
+242  DEBUG [2023-02-20 09:17:40]  -Dio.netty.noPreferDirect: false
+243  DEBUG [2023-02-20 09:17:40]  org.jctools-core.MpscChunkedArrayQueue: available
+265  DEBUG [2023-02-20 09:17:40]  LatencyUtils/HdrUtils are not available, metrics are disabled
+0    INFO  [2023-02-20 09:44:01]  {dataSource-1} inited
+219  DEBUG [2023-02-20 09:44:01]  Using Log4J as the default logging framework
+221  DEBUG [2023-02-20 09:44:01]  -Dio.netty.eventLoopThreads: 12
+226  DEBUG [2023-02-20 09:44:01]  Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+238  DEBUG [2023-02-20 09:44:01]  -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+238  DEBUG [2023-02-20 09:44:01]  -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+241  DEBUG [2023-02-20 09:44:01]  -Dio.netty.leakDetection.level: simple
+241  DEBUG [2023-02-20 09:44:01]  -Dio.netty.leakDetection.targetRecords: 4
+242  DEBUG [2023-02-20 09:44:01]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@58f437b0
+244  DEBUG [2023-02-20 09:44:01]  Platform: Windows
+244  DEBUG [2023-02-20 09:44:01]  -Dio.netty.noUnsafe: false
+244  DEBUG [2023-02-20 09:44:01]  Java version: 8
+245  DEBUG [2023-02-20 09:44:01]  sun.misc.Unsafe.theUnsafe: available
+245  DEBUG [2023-02-20 09:44:01]  sun.misc.Unsafe.copyMemory: available
+246  DEBUG [2023-02-20 09:44:01]  java.nio.Buffer.address: available
+246  DEBUG [2023-02-20 09:44:01]  direct buffer constructor: available
+246  DEBUG [2023-02-20 09:44:01]  java.nio.Bits.unaligned: available, true
+246  DEBUG [2023-02-20 09:44:01]  jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+247  DEBUG [2023-02-20 09:44:01]  java.nio.DirectByteBuffer.<init>(long, int): available
+247  DEBUG [2023-02-20 09:44:01]  sun.misc.Unsafe: available
+247  DEBUG [2023-02-20 09:44:01]  -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+247  DEBUG [2023-02-20 09:44:01]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+248  DEBUG [2023-02-20 09:44:01]  -Dio.netty.maxDirectMemory: 8460763136 bytes
+248  DEBUG [2023-02-20 09:44:01]  -Dio.netty.uninitializedArrayAllocationThreshold: -1
+248  DEBUG [2023-02-20 09:44:01]  java.nio.ByteBuffer.cleaner(): available
+249  DEBUG [2023-02-20 09:44:01]  -Dio.netty.noPreferDirect: false
+250  DEBUG [2023-02-20 09:44:01]  org.jctools-core.MpscChunkedArrayQueue: available
+272  DEBUG [2023-02-20 09:44:01]  LatencyUtils/HdrUtils are not available, metrics are disabled
+32115 DEBUG [2023-02-20 09:44:33]  Trying to get a Redis connection for: redis://127.0.0.1?timeout=5s
+32178 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.numHeapArenas: 24
+32178 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.numDirectArenas: 24
+32178 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.pageSize: 8192
+32178 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.maxOrder: 11
+32178 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.chunkSize: 16777216
+32178 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.smallCacheSize: 256
+32178 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.normalCacheSize: 64
+32178 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+32179 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.cacheTrimInterval: 8192
+32179 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+32179 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.useCacheForAllThreads: true
+32179 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+32185 DEBUG [2023-02-20 09:44:33]  -Dio.netty.allocator.type: pooled
+32185 DEBUG [2023-02-20 09:44:33]  -Dio.netty.threadLocalDirectBufferSize: 0
+32185 DEBUG [2023-02-20 09:44:33]  -Dio.netty.maxThreadLocalCharBufferSize: 16384
+32188 DEBUG [2023-02-20 09:44:33]  Starting without optional kqueue library
+32188 DEBUG [2023-02-20 09:44:33]  Starting without optional epoll library
+32190 DEBUG [2023-02-20 09:44:33]  Allocating executor io.netty.channel.nio.NioEventLoopGroup
+32190 DEBUG [2023-02-20 09:44:33]  Creating executor io.netty.channel.nio.NioEventLoopGroup
+32190 DEBUG [2023-02-20 09:44:33]  -Dio.netty.eventLoopThreads: 24
+32192 DEBUG [2023-02-20 09:44:33]  -Dio.netty.noKeySetOptimization: false
+32192 DEBUG [2023-02-20 09:44:33]  -Dio.netty.selectorAutoRebuildThreshold: 512
+32198 DEBUG [2023-02-20 09:44:33]  Adding reference to io.netty.channel.nio.NioEventLoopGroup@4b49ca66, existing ref count 0
+32205 DEBUG [2023-02-20 09:44:33]  Resolved SocketAddress 127.0.0.1:6379 using redis://127.0.0.1?timeout=5s
+32206 DEBUG [2023-02-20 09:44:33]  Connecting to Redis at 127.0.0.1:6379
+32209 DEBUG [2023-02-20 09:44:33]  -Dio.netty.processId: 7160 (auto-detected)
+32210 DEBUG [2023-02-20 09:44:33]  -Djava.net.preferIPv4Stack: false
+32210 DEBUG [2023-02-20 09:44:33]  -Djava.net.preferIPv6Addresses: false
+32644 DEBUG [2023-02-20 09:44:34]  Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+32644 DEBUG [2023-02-20 09:44:34]  Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+33105 DEBUG [2023-02-20 09:44:34]  -Dio.netty.machineId: 44:af:28:ff:fe:31:a5:6f (auto-detected)
+33137 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, [id: 0x4bdf3fa7] (inactive), chid=0x1] channelRegistered()
+33139 DEBUG [2023-02-20 09:44:34]  -Dio.netty.recycler.maxCapacityPerThread: 4096
+33139 DEBUG [2023-02-20 09:44:34]  -Dio.netty.recycler.maxSharedCapacityFactor: 2
+33140 DEBUG [2023-02-20 09:44:34]  -Dio.netty.recycler.linkCapacity: 16
+33140 DEBUG [2023-02-20 09:44:34]  -Dio.netty.recycler.ratio: 8
+33140 DEBUG [2023-02-20 09:44:34]  -Dio.netty.recycler.delayedQueue.ratio: 8
+33145 DEBUG [2023-02-20 09:44:34]  -Dio.netty.buffer.checkAccessible: true
+33145 DEBUG [2023-02-20 09:44:34]  -Dio.netty.buffer.checkBounds: true
+33145 DEBUG [2023-02-20 09:44:34]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6e9c2e65
+33157 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+33158 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379] writing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+33162 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] Received: 30 bytes, 1 commands in the stack
+33162 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+33164 DEBUG [2023-02-20 09:44:34]  Decode done, empty stack: true
+33164 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='ERR unknown command 'HELLO''], commandType=io.lettuce.core.protocol.Command]
+33165 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+33165 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379] writing command AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+33166 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] Received: 7 bytes, 1 commands in the stack
+33166 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+33166 DEBUG [2023-02-20 09:44:34]  Decode done, empty stack: true
+33166 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=PING, output=StatusOutput [output=PONG, error='null'], commandType=io.lettuce.core.protocol.Command]
+33166 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] channelActive()
+33167 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, epid=0x1] activateEndpointAndExecuteBufferedCommands 0 command(s) buffered
+33167 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, epid=0x1] activating endpoint
+33167 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, epid=0x1] flushCommands()
+33167 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, epid=0x1] flushCommands() Flushing 0 commands
+33167 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelActive()
+33167 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] channelActive() done
+33167 DEBUG [2023-02-20 09:44:34]  Connecting to Redis at 127.0.0.1:6379: Success
+33175 DEBUG [2023-02-20 09:44:34]  dispatching command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+33176 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, epid=0x1] write() writeAndFlush command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+33177 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+33178 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379] writing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+33178 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, epid=0x1] write() done
+33180 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] Received: 4 bytes, 1 commands in the stack
+33180 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+33181 DEBUG [2023-02-20 09:44:34]  Decode done, empty stack: true
+33181 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+33183 DEBUG [2023-02-20 09:44:34]  closeAsync()
+33183 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, epid=0x1] closeAsync()
+33184 DEBUG [2023-02-20 09:44:34]  Initiate shutdown (100, 100, MILLISECONDS)
+33185 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] channelInactive()
+33185 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, epid=0x1] deactivating endpoint handler
+33185 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] channelInactive() done
+33186 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelInactive()
+33186 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] Reconnect scheduling disabled
+33186 DEBUG [2023-02-20 09:44:34]  [channel=0xee8db767, /127.0.0.1:62363 -> /127.0.0.1:6379, chid=0x1] channelUnregistered()
+33187 DEBUG [2023-02-20 09:44:34]  Release executor io.netty.channel.nio.NioEventLoopGroup@4b49ca66
+33292 DEBUG [2023-02-20 09:44:34]  Freed 5 thread-local buffer(s) from thread: lettuce-nioEventLoop-4-1
+33293 DEBUG [2023-02-20 09:44:34]  Initiate shutdown (0, 2, SECONDS)
+33294 DEBUG [2023-02-20 09:44:34]  Initiate shutdown (0, 2, SECONDS)
+33296 INFO  [2023-02-20 09:44:34]  {dataSource-1} closing ...
+33299 INFO  [2023-02-20 09:44:34]  {dataSource-1} closed
+0    INFO  [2023-02-20 09:44:38]  {dataSource-1} inited
+227  DEBUG [2023-02-20 09:44:39]  Using Log4J as the default logging framework
+229  DEBUG [2023-02-20 09:44:39]  -Dio.netty.eventLoopThreads: 12
+235  DEBUG [2023-02-20 09:44:39]  Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+247  DEBUG [2023-02-20 09:44:39]  -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+247  DEBUG [2023-02-20 09:44:39]  -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+251  DEBUG [2023-02-20 09:44:39]  -Dio.netty.leakDetection.level: simple
+251  DEBUG [2023-02-20 09:44:39]  -Dio.netty.leakDetection.targetRecords: 4
+252  DEBUG [2023-02-20 09:44:39]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@58f437b0
+254  DEBUG [2023-02-20 09:44:39]  Platform: Windows
+255  DEBUG [2023-02-20 09:44:39]  -Dio.netty.noUnsafe: false
+255  DEBUG [2023-02-20 09:44:39]  Java version: 8
+256  DEBUG [2023-02-20 09:44:39]  sun.misc.Unsafe.theUnsafe: available
+256  DEBUG [2023-02-20 09:44:39]  sun.misc.Unsafe.copyMemory: available
+256  DEBUG [2023-02-20 09:44:39]  java.nio.Buffer.address: available
+257  DEBUG [2023-02-20 09:44:39]  direct buffer constructor: available
+257  DEBUG [2023-02-20 09:44:39]  java.nio.Bits.unaligned: available, true
+257  DEBUG [2023-02-20 09:44:39]  jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+257  DEBUG [2023-02-20 09:44:39]  java.nio.DirectByteBuffer.<init>(long, int): available
+257  DEBUG [2023-02-20 09:44:39]  sun.misc.Unsafe: available
+258  DEBUG [2023-02-20 09:44:39]  -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+258  DEBUG [2023-02-20 09:44:39]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+259  DEBUG [2023-02-20 09:44:39]  -Dio.netty.maxDirectMemory: 8460763136 bytes
+259  DEBUG [2023-02-20 09:44:39]  -Dio.netty.uninitializedArrayAllocationThreshold: -1
+259  DEBUG [2023-02-20 09:44:39]  java.nio.ByteBuffer.cleaner(): available
+259  DEBUG [2023-02-20 09:44:39]  -Dio.netty.noPreferDirect: false
+261  DEBUG [2023-02-20 09:44:39]  org.jctools-core.MpscChunkedArrayQueue: available
+285  DEBUG [2023-02-20 09:44:39]  LatencyUtils/HdrUtils are not available, metrics are disabled
+46100 DEBUG [2023-02-20 09:45:24]  Trying to get a Redis connection for: redis://127.0.0.1?timeout=5s
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.numHeapArenas: 24
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.numDirectArenas: 24
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.pageSize: 8192
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.maxOrder: 11
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.chunkSize: 16777216
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.smallCacheSize: 256
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.normalCacheSize: 64
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.cacheTrimInterval: 8192
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.useCacheForAllThreads: true
+46168 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+46176 DEBUG [2023-02-20 09:45:25]  -Dio.netty.allocator.type: pooled
+46176 DEBUG [2023-02-20 09:45:25]  -Dio.netty.threadLocalDirectBufferSize: 0
+46176 DEBUG [2023-02-20 09:45:25]  -Dio.netty.maxThreadLocalCharBufferSize: 16384
+46178 DEBUG [2023-02-20 09:45:25]  Starting without optional kqueue library
+46179 DEBUG [2023-02-20 09:45:25]  Starting without optional epoll library
+46180 DEBUG [2023-02-20 09:45:25]  Allocating executor io.netty.channel.nio.NioEventLoopGroup
+46180 DEBUG [2023-02-20 09:45:25]  Creating executor io.netty.channel.nio.NioEventLoopGroup
+46181 DEBUG [2023-02-20 09:45:25]  -Dio.netty.eventLoopThreads: 24
+46183 DEBUG [2023-02-20 09:45:25]  -Dio.netty.noKeySetOptimization: false
+46183 DEBUG [2023-02-20 09:45:25]  -Dio.netty.selectorAutoRebuildThreshold: 512
+46189 DEBUG [2023-02-20 09:45:25]  Adding reference to io.netty.channel.nio.NioEventLoopGroup@1aa31e2f, existing ref count 0
+46197 DEBUG [2023-02-20 09:45:25]  Resolved SocketAddress 127.0.0.1:6379 using redis://127.0.0.1?timeout=5s
+46197 DEBUG [2023-02-20 09:45:25]  Connecting to Redis at 127.0.0.1:6379
+46201 DEBUG [2023-02-20 09:45:25]  -Dio.netty.processId: 6444 (auto-detected)
+46202 DEBUG [2023-02-20 09:45:25]  -Djava.net.preferIPv4Stack: false
+46202 DEBUG [2023-02-20 09:45:25]  -Djava.net.preferIPv6Addresses: false
+46663 DEBUG [2023-02-20 09:45:25]  Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+46664 DEBUG [2023-02-20 09:45:25]  Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+47130 DEBUG [2023-02-20 09:45:25]  -Dio.netty.machineId: 44:af:28:ff:fe:31:a5:6f (auto-detected)
+47163 DEBUG [2023-02-20 09:45:25]  [channel=0x585a610a, [id: 0x721ab861] (inactive), chid=0x1] channelRegistered()
+47166 DEBUG [2023-02-20 09:45:25]  -Dio.netty.recycler.maxCapacityPerThread: 4096
+47166 DEBUG [2023-02-20 09:45:25]  -Dio.netty.recycler.maxSharedCapacityFactor: 2
+47166 DEBUG [2023-02-20 09:45:25]  -Dio.netty.recycler.linkCapacity: 16
+47166 DEBUG [2023-02-20 09:45:25]  -Dio.netty.recycler.ratio: 8
+47166 DEBUG [2023-02-20 09:45:25]  -Dio.netty.recycler.delayedQueue.ratio: 8
+47171 DEBUG [2023-02-20 09:45:26]  -Dio.netty.buffer.checkAccessible: true
+47171 DEBUG [2023-02-20 09:45:26]  -Dio.netty.buffer.checkBounds: true
+47171 DEBUG [2023-02-20 09:45:26]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@42f6b88e
+47184 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+47185 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379] writing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+47189 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] Received: 30 bytes, 1 commands in the stack
+47189 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+47191 DEBUG [2023-02-20 09:45:26]  Decode done, empty stack: true
+47191 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='ERR unknown command 'HELLO''], commandType=io.lettuce.core.protocol.Command]
+47192 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+47192 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379] writing command AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+47193 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] Received: 7 bytes, 1 commands in the stack
+47193 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+47193 DEBUG [2023-02-20 09:45:26]  Decode done, empty stack: true
+47193 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=PING, output=StatusOutput [output=PONG, error='null'], commandType=io.lettuce.core.protocol.Command]
+47193 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] channelActive()
+47193 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, epid=0x1] activateEndpointAndExecuteBufferedCommands 0 command(s) buffered
+47194 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, epid=0x1] activating endpoint
+47194 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, epid=0x1] flushCommands()
+47194 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, epid=0x1] flushCommands() Flushing 0 commands
+47194 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelActive()
+47194 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] channelActive() done
+47194 DEBUG [2023-02-20 09:45:26]  Connecting to Redis at 127.0.0.1:6379: Success
+47202 DEBUG [2023-02-20 09:45:26]  dispatching command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+47203 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, epid=0x1] write() writeAndFlush command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+47205 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+47205 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379] writing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+47206 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, epid=0x1] write() done
+47207 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] Received: 4 bytes, 1 commands in the stack
+47207 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+47207 DEBUG [2023-02-20 09:45:26]  Decode done, empty stack: true
+47207 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+47209 DEBUG [2023-02-20 09:45:26]  closeAsync()
+47209 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, epid=0x1] closeAsync()
+47211 DEBUG [2023-02-20 09:45:26]  Initiate shutdown (100, 100, MILLISECONDS)
+47211 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] channelInactive()
+47211 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, epid=0x1] deactivating endpoint handler
+47212 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] channelInactive() done
+47212 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelInactive()
+47212 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] Reconnect scheduling disabled
+47212 DEBUG [2023-02-20 09:45:26]  [channel=0x585a610a, /127.0.0.1:62417 -> /127.0.0.1:6379, chid=0x1] channelUnregistered()
+47213 DEBUG [2023-02-20 09:45:26]  Release executor io.netty.channel.nio.NioEventLoopGroup@1aa31e2f
+47318 DEBUG [2023-02-20 09:45:26]  Freed 5 thread-local buffer(s) from thread: lettuce-nioEventLoop-4-1
+47320 DEBUG [2023-02-20 09:45:26]  Initiate shutdown (0, 2, SECONDS)
+47322 DEBUG [2023-02-20 09:45:26]  Initiate shutdown (0, 2, SECONDS)
+47324 INFO  [2023-02-20 09:45:26]  {dataSource-1} closing ...
+47327 INFO  [2023-02-20 09:45:26]  {dataSource-1} closed
+0    INFO  [2023-02-20 09:45:50]  {dataSource-1} inited
+214  DEBUG [2023-02-20 09:45:50]  Using Log4J as the default logging framework
+215  DEBUG [2023-02-20 09:45:50]  -Dio.netty.eventLoopThreads: 12
+221  DEBUG [2023-02-20 09:45:50]  Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+232  DEBUG [2023-02-20 09:45:50]  -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+233  DEBUG [2023-02-20 09:45:50]  -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+236  DEBUG [2023-02-20 09:45:50]  -Dio.netty.leakDetection.level: simple
+236  DEBUG [2023-02-20 09:45:50]  -Dio.netty.leakDetection.targetRecords: 4
+238  DEBUG [2023-02-20 09:45:50]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@26c89563
+239  DEBUG [2023-02-20 09:45:50]  Platform: Windows
+240  DEBUG [2023-02-20 09:45:50]  -Dio.netty.noUnsafe: false
+240  DEBUG [2023-02-20 09:45:50]  Java version: 8
+241  DEBUG [2023-02-20 09:45:50]  sun.misc.Unsafe.theUnsafe: available
+241  DEBUG [2023-02-20 09:45:50]  sun.misc.Unsafe.copyMemory: available
+242  DEBUG [2023-02-20 09:45:50]  java.nio.Buffer.address: available
+242  DEBUG [2023-02-20 09:45:50]  direct buffer constructor: available
+243  DEBUG [2023-02-20 09:45:50]  java.nio.Bits.unaligned: available, true
+243  DEBUG [2023-02-20 09:45:50]  jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+243  DEBUG [2023-02-20 09:45:50]  java.nio.DirectByteBuffer.<init>(long, int): available
+243  DEBUG [2023-02-20 09:45:50]  sun.misc.Unsafe: available
+243  DEBUG [2023-02-20 09:45:50]  -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+243  DEBUG [2023-02-20 09:45:50]  -Dio.netty.bitMode: 64 (sun.arch.data.model)
+244  DEBUG [2023-02-20 09:45:50]  -Dio.netty.maxDirectMemory: 8460763136 bytes
+244  DEBUG [2023-02-20 09:45:50]  -Dio.netty.uninitializedArrayAllocationThreshold: -1
+245  DEBUG [2023-02-20 09:45:50]  java.nio.ByteBuffer.cleaner(): available
+245  DEBUG [2023-02-20 09:45:50]  -Dio.netty.noPreferDirect: false
+246  DEBUG [2023-02-20 09:45:50]  org.jctools-core.MpscChunkedArrayQueue: available
+268  DEBUG [2023-02-20 09:45:50]  LatencyUtils/HdrUtils are not available, metrics are disabled
+16452 DEBUG [2023-02-20 09:46:06]  Trying to get a Redis connection for: redis://127.0.0.1?timeout=5s
+16529 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.numHeapArenas: 24
+16529 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.numDirectArenas: 24
+16529 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.pageSize: 8192
+16529 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.maxOrder: 11
+16529 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.chunkSize: 16777216
+16530 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.smallCacheSize: 256
+16530 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.normalCacheSize: 64
+16530 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+16530 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.cacheTrimInterval: 8192
+16530 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+16530 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.useCacheForAllThreads: true
+16530 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+16538 DEBUG [2023-02-20 09:46:07]  -Dio.netty.allocator.type: pooled
+16539 DEBUG [2023-02-20 09:46:07]  -Dio.netty.threadLocalDirectBufferSize: 0
+16539 DEBUG [2023-02-20 09:46:07]  -Dio.netty.maxThreadLocalCharBufferSize: 16384
+16542 DEBUG [2023-02-20 09:46:07]  Starting without optional kqueue library
+16543 DEBUG [2023-02-20 09:46:07]  Starting without optional epoll library
+16544 DEBUG [2023-02-20 09:46:07]  Allocating executor io.netty.channel.nio.NioEventLoopGroup
+16544 DEBUG [2023-02-20 09:46:07]  Creating executor io.netty.channel.nio.NioEventLoopGroup
+16544 DEBUG [2023-02-20 09:46:07]  -Dio.netty.eventLoopThreads: 24
+16547 DEBUG [2023-02-20 09:46:07]  -Dio.netty.noKeySetOptimization: false
+16547 DEBUG [2023-02-20 09:46:07]  -Dio.netty.selectorAutoRebuildThreshold: 512
+16555 DEBUG [2023-02-20 09:46:07]  Adding reference to io.netty.channel.nio.NioEventLoopGroup@68c55384, existing ref count 0
+16565 DEBUG [2023-02-20 09:46:07]  Resolved SocketAddress 127.0.0.1:6379 using redis://127.0.0.1?timeout=5s
+16566 DEBUG [2023-02-20 09:46:07]  Connecting to Redis at 127.0.0.1:6379
+16571 DEBUG [2023-02-20 09:46:07]  -Dio.netty.processId: 18356 (auto-detected)
+16573 DEBUG [2023-02-20 09:46:07]  -Djava.net.preferIPv4Stack: false
+16573 DEBUG [2023-02-20 09:46:07]  -Djava.net.preferIPv6Addresses: false
+17063 DEBUG [2023-02-20 09:46:07]  Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+17064 DEBUG [2023-02-20 09:46:07]  Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+17528 DEBUG [2023-02-20 09:46:08]  -Dio.netty.machineId: 44:af:28:ff:fe:31:a5:6f (auto-detected)
+17560 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, [id: 0x86203e84] (inactive), chid=0x1] channelRegistered()
+17562 DEBUG [2023-02-20 09:46:08]  -Dio.netty.recycler.maxCapacityPerThread: 4096
+17562 DEBUG [2023-02-20 09:46:08]  -Dio.netty.recycler.maxSharedCapacityFactor: 2
+17562 DEBUG [2023-02-20 09:46:08]  -Dio.netty.recycler.linkCapacity: 16
+17562 DEBUG [2023-02-20 09:46:08]  -Dio.netty.recycler.ratio: 8
+17562 DEBUG [2023-02-20 09:46:08]  -Dio.netty.recycler.delayedQueue.ratio: 8
+17567 DEBUG [2023-02-20 09:46:08]  -Dio.netty.buffer.checkAccessible: true
+17567 DEBUG [2023-02-20 09:46:08]  -Dio.netty.buffer.checkBounds: true
+17567 DEBUG [2023-02-20 09:46:08]  Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@33244707
+17579 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+17581 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379] writing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+17584 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] Received: 30 bytes, 1 commands in the stack
+17585 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+17586 DEBUG [2023-02-20 09:46:08]  Decode done, empty stack: true
+17586 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='ERR unknown command 'HELLO''], commandType=io.lettuce.core.protocol.Command]
+17587 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+17587 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379] writing command AsyncCommand [type=PING, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+17588 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] Received: 7 bytes, 1 commands in the stack
+17588 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+17588 DEBUG [2023-02-20 09:46:08]  Decode done, empty stack: true
+17588 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=PING, output=StatusOutput [output=PONG, error='null'], commandType=io.lettuce.core.protocol.Command]
+17588 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] channelActive()
+17589 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, epid=0x1] activateEndpointAndExecuteBufferedCommands 0 command(s) buffered
+17589 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, epid=0x1] activating endpoint
+17589 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, epid=0x1] flushCommands()
+17589 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, epid=0x1] flushCommands() Flushing 0 commands
+17589 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelActive()
+17590 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] channelActive() done
+17590 DEBUG [2023-02-20 09:46:08]  Connecting to Redis at 127.0.0.1:6379: Success
+17598 DEBUG [2023-02-20 09:46:08]  dispatching command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+17600 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, epid=0x1] write() writeAndFlush command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+17601 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] write(ctx, AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+17601 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379] writing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+17602 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, epid=0x1] write() done
+17603 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] Received: 4 bytes, 1 commands in the stack
+17603 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] Stack contains: 1 commands
+17603 DEBUG [2023-02-20 09:46:08]  Decode done, empty stack: true
+17603 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] Completing command AsyncCommand [type=KEYS, output=KeyListOutput [output=[], error='null'], commandType=io.lettuce.core.protocol.Command]
+17605 DEBUG [2023-02-20 09:46:08]  closeAsync()
+17605 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, epid=0x1] closeAsync()
+17607 DEBUG [2023-02-20 09:46:08]  Initiate shutdown (100, 100, MILLISECONDS)
+17607 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] channelInactive()
+17607 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, epid=0x1] deactivating endpoint handler
+17608 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] channelInactive() done
+17608 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] channelInactive()
+17608 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, last known addr=/127.0.0.1:6379] Reconnect scheduling disabled
+17608 DEBUG [2023-02-20 09:46:08]  [channel=0xf3f7879f, /127.0.0.1:62492 -> /127.0.0.1:6379, chid=0x1] channelUnregistered()
+17610 DEBUG [2023-02-20 09:46:08]  Release executor io.netty.channel.nio.NioEventLoopGroup@68c55384
+17717 DEBUG [2023-02-20 09:46:08]  Freed 5 thread-local buffer(s) from thread: lettuce-nioEventLoop-4-1
+17718 DEBUG [2023-02-20 09:46:08]  Initiate shutdown (0, 2, SECONDS)
+17720 DEBUG [2023-02-20 09:46:08]  Initiate shutdown (0, 2, SECONDS)
+17722 INFO  [2023-02-20 09:46:08]  {dataSource-1} closing ...
+17725 INFO  [2023-02-20 09:46:08]  {dataSource-1} closed

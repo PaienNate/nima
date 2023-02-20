@@ -1,0 +1,60 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /xcloud
+    encoding:
+      enabled: true
+      force: true
+      charset: utf-8
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mysqldb?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+    username: root
+    password: password
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      min-idle: 5
+      max-active: 20
+      initial-size: 5
+      max-wait: 60000
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    timeout: 5000
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 256MB
+      max-request-size: 256MB
+  mail:
+    default-encoding: utf-8
+    host: smtp.qq.com
+    username: 1101839859@qq.com
+    password: 888888
+    port: 465
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465
+mybatis:
+  config-location: classpath:mybatis.xml
+alibaba:
+  oss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    accessKeyId: LTAI5tFN5muQCdeSB9ZYw85j
+    accessKeySecret: KFkEw4NEZ86A1tN8LkJGkzA3dsONen
+    bucketName: pinenut666
